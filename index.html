@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TermiAI — Prompt Your Operating System with Confidence</title>
-  <meta name="description" content="A natural language terminal agent with deterministic guardrails, multi-agent planning, and change journaling.">
+  <title>HASSHR — Natural Language Operating System Agent</title>
+  <meta name="description" content="Operate your computer in plain language with deterministic safety, multi-agent workflows, and atomic change rollback.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
   </script>
   <style>
     .glow-radial {
-      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 80%);
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.14) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 80%);
     }
   </style>
 </head>
@@ -49,25 +49,36 @@
   <header class="relative z-10 border-b border-dark-800/80 bg-dark-950/80 backdrop-blur-md sticky top-0">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <!-- Embedded SVG Logo Icon -->
-        <svg class="h-10 w-10" viewBox="0 0 180 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M 90 15 L 155 48 L 155 125 C 155 155, 120 172, 90 180 C 60 172, 25 155, 25 125 L 25 48 Z" fill="#0c1322" stroke="#10b981" stroke-width="6" stroke-linejoin="round" />
-          <path d="M 58 74 L 84 97 L 58 120" stroke="#f8fafc" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-          <line x1="97" y1="120" x2="123" y2="120" stroke="#10b981" stroke-width="8" stroke-linecap="round" />
-          <path d="M 90 32 C 90 42, 98 50, 108 50 C 98 50, 90 58, 90 68 C 90 58, 82 50, 72 50 C 82 50, 90 42, 90 32 Z" fill="#38bdf8" />
+        <!-- Minimalist HASSHR Vector Logo Mark -->
+        <svg class="h-10 w-10" viewBox="0 0 160 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shield Contour -->
+          <path d="M 80 20 L 140 48 L 140 108 C 140 136, 108 152, 80 160 C 52 152, 20 136, 20 108 L 20 48 Z" 
+                stroke="#10b981" stroke-width="7" stroke-linejoin="round" fill="#0b0f19" />
+          <!-- Prompt Prompt Chevron > -->
+          <path d="M 52 70 L 74 90 L 52 110" 
+                stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- Prompt Cursor _ -->
+          <line x1="84" y1="110" x2="108" y2="110" 
+                stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+          <!-- Clean AI Spark -->
+          <path d="M 80 6 C 80 14, 86 20, 94 20 C 86 20, 80 26, 80 34 C 80 26, 74 20, 66 20 C 74 20, 80 14, 80 6 Z" 
+                fill="#38bdf8" />
         </svg>
-        <span class="text-xl font-bold tracking-tight font-mono text-white">Termi<span class="text-accent-emerald font-sans font-extrabold">AI</span></span>
+        <div class="flex items-baseline tracking-tight">
+          <span class="text-2xl font-extrabold text-white">HASS</span>
+          <span class="text-2xl font-extrabold text-accent-emerald">HR</span>
+        </div>
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
         <a href="#features" class="hover:text-white transition">Features</a>
         <a href="#modes" class="hover:text-white transition">Safety Modes</a>
-        <a href="#troubleshooting" class="hover:text-white transition">Troubleshooting Cases</a>
-        <a href="#architecture" class="hover:text-white transition">How it Works</a>
+        <a href="#cases" class="hover:text-white transition">Troubleshooting Cases</a>
+        <a href="#install" class="hover:text-white transition">Quickstart</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="https://github.com/shammadahmed/termiai" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-dark-800 hover:bg-dark-700 text-slate-200 border border-slate-700 px-4 py-2 rounded-xl text-sm font-medium transition">
+        <a href="https://github.com/shammadahmed/hasshr" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-dark-800 hover:bg-dark-700 text-slate-200 border border-slate-700 px-4 py-2 rounded-xl text-sm font-medium transition">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub
         </a>
@@ -80,226 +91,17 @@
     <div class="max-w-4xl mx-auto text-center">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-emerald/30 bg-accent-emerald/10 text-accent-emerald text-xs font-semibold mb-6">
         <span class="inline-block w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span>
-        v0.1 Hackathon Preview • Cross-Platform (Linux, macOS, Windows)
+        v0.1 Preview • Cross-Platform (Linux, macOS, Windows)
       </div>
       <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-6">
         Prompt your operating system. <br/>
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
-          Without breaking it.
+          With complete peace of mind.
         </span>
       </h1>
       <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-        TermiAI is an autonomous terminal agent that translates plain English into verified system operations. Governed by deterministic risk classification, change journals, and atomic rollback.
+        HASSHR translates conversational intent into verified command-line operations. Protected by deterministic guardrails, change logging, and instant rollback[cite: 1].
       </p>
 
       <!-- Quick Install Box -->
-      <div class="max-w-xl mx-auto bg-dark-900 border border-dark-700/80 rounded-2xl p-2.5 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div class="flex items-center gap-3 px-3 py-1 font-mono text-sm text-slate-300 overflow-x-auto w-full">
-          <span class="text-accent-emerald font-bold">$</span>
-          <span>pip install termiai</span>
-        </div>
-        <button onclick="navigator.clipboard.writeText('pip install termiai'); this.innerText='Copied!';" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-accent-emerald hover:bg-emerald-400 text-dark-950 font-semibold text-sm transition">
-          Copy
-        </button>
-      </div>
-      <p class="text-xs text-slate-500 mt-3 font-mono">Requires Python 3.10+ • Bring your own API key or run local models (Ollama/LM Studio)</p>
-    </div>
-
-    <!-- Terminal Mockup Window -->
-    <div class="max-w-4xl mx-auto mt-14 rounded-2xl border border-dark-700/80 bg-dark-900/90 shadow-2xl overflow-hidden font-mono text-sm">
-      <div class="bg-dark-800/80 px-4 py-3 border-b border-dark-700 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-          <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-          <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-          <span class="text-xs text-slate-400 font-sans ml-2">termiai — interactive session (mode: ask-sensitive)</span>
-        </div>
-        <span class="text-xs text-slate-500">model: claude-sonnet</span>
-      </div>
-      <div class="p-6 space-y-4 text-left">
-        <div>
-          <span class="text-accent-emerald font-bold">You &gt;</span>
-          <span class="text-slate-100">Find all PDF files scattered in Downloads and organize them into a PDFs directory.</span>
-        </div>
-        <div class="text-slate-400 pl-4 border-l-2 border-slate-700 space-y-1">
-          <p><span class="text-accent-emerald">✓</span> Inspected ~/Downloads (Found 23 PDF documents)</p>
-          <p><span class="text-accent-emerald">✓</span> Created directory ~/Downloads/PDFs</p>
-          <p><span class="text-accent-emerald">✓</span> Safely relocated 23 files (Journal hashes recorded)</p>
-          <p><span class="text-accent-emerald">✓</span> Verified destination state</p>
-        </div>
-        <div class="pt-2 text-slate-300">
-          <span class="text-cyan-400 font-bold">Agent &gt;</span> Completed successfully. Run <span class="bg-dark-800 text-accent-emerald px-1.5 py-0.5 rounded border border-dark-700">/undo</span> at any time to reverse this action.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Core Pillars / Why TermiAI -->
-  <section id="features" class="relative z-10 py-20 border-t border-dark-800">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-white tracking-tight">Built for Safety. Not Guesswork.</h2>
-        <p class="text-slate-400 mt-3">Most terminal tools run raw commands generated by LLMs without validation. TermiAI wraps machine execution in four discrete safety layers.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Feature 1 -->
-        <div class="bg-dark-900 border border-dark-800 p-8 rounded-2xl hover:border-slate-700 transition">
-          <div class="w-12 h-12 rounded-xl bg-accent-emerald/10 border border-accent-emerald/30 flex items-center justify-center text-accent-emerald mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-2">Deterministic Risk Engine</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Commands are parsed via AST & shlex outside the LLM. Destructive actions (<code class="text-xs bg-dark-800 text-rose-400 px-1 py-0.5 rounded">rm -rf /</code>, <code class="text-xs bg-dark-800 text-rose-400 px-1 py-0.5 rounded">mkfs</code>) are hard-blocked unconditionally.
-          </p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="bg-dark-900 border border-dark-800 p-8 rounded-2xl hover:border-slate-700 transition">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-2">Atomic Change Journal</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Every config edit, folder move, or package adjustment records SHA-256 diffs and snapshots. If something doesn't work, roll it back with one command.
-          </p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="bg-dark-900 border border-dark-800 p-8 rounded-2xl hover:border-slate-700 transition">
-          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-2">Multi-Agent Verification</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Execution is split between Planner, Risk, Executor, and Verifier agents. Steps aren't marked complete until target state is confirmed.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Autonomy Modes -->
-  <section id="modes" class="relative z-10 py-20 bg-dark-900/50 border-t border-dark-800">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-white tracking-tight">Granular Permission Modes</h2>
-        <p class="text-slate-400 mt-3">You control the autonomy dial. Switch modes on the fly using <code class="text-accent-emerald text-sm">/mode</code>.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- ask-sensitive (Default) -->
-        <div class="border-2 border-accent-emerald/60 bg-dark-900 rounded-2xl p-6 relative flex flex-col justify-between">
-          <div class="absolute -top-3 right-6 bg-accent-emerald text-dark-950 font-bold text-xs uppercase px-2.5 py-0.5 rounded-full">
-            Default
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white font-mono">ask-sensitive</h3>
-            <p class="text-slate-400 text-sm mt-2">
-              Safe & moderate operations run automatically. State-altering tasks (sudo, package installs, grub, disk changes) halt for explicit approval.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-dark-800 text-xs text-slate-400">
-            Recommended for everyday use & power users.
-          </div>
-        </div>
-
-        <!-- ask-all -->
-        <div class="border border-dark-800 bg-dark-900 rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-lg font-bold text-white font-mono">ask-all</h3>
-            <p class="text-slate-400 text-sm mt-2">
-              Maximum oversight. Read-only checks proceed freely, but every single write, move, or config alteration requires user confirmation.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-dark-800 text-xs text-slate-400">
-            Ideal for non-programmers and learning environments.
-          </div>
-        </div>
-
-        <!-- auto -->
-        <div class="border border-dark-800 bg-dark-900 rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-lg font-bold text-white font-mono">auto</h3>
-            <p class="text-slate-400 text-sm mt-2">
-              Zero confirmation prompts for approved workflows. Hard-blocked destructive operations still refuse to run.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-dark-800 text-xs text-slate-400">
-            For automated scripts & isolated CI containers.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Troubleshooting Cases Section -->
-  <section id="troubleshooting" class="relative z-10 py-20 border-t border-dark-800">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div class="text-accent-cyan text-xs font-semibold uppercase tracking-widest mb-2 font-mono">Deep Diagnostic Engine</div>
-          <h2 class="text-3xl font-bold text-white tracking-tight mb-4">Troubleshooting Cases: Guided Trial & Error</h2>
-          <p class="text-slate-400 text-base leading-relaxed mb-6">
-            Got a stubborn hardware or network bug? (e.g., <em>"Audio output switches to Dummy Output after reboot"</em>). TermiAI starts an isolated Case:
-          </p>
-          <ul class="space-y-3.5 text-sm text-slate-300">
-            <li class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-full bg-accent-emerald/20 text-accent-emerald flex items-center justify-center font-bold text-xs mt-0.5">1</span>
-              <span><strong>Pre-defines "Fixed":</strong> Establishes measurable pass/fail verification tests before touching any configuration.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-full bg-accent-emerald/20 text-accent-emerald flex items-center justify-center font-bold text-xs mt-0.5">2</span>
-              <span><strong>Isolated Trials:</strong> Tests hypotheses one at a time. If an attempt fails, it rolls back immediately before testing the next.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-full bg-accent-emerald/20 text-accent-emerald flex items-center justify-center font-bold text-xs mt-0.5">3</span>
-              <span><strong>Clean-Room Confirm:</strong> When a solution works, reverts all experimental steps and reapplies only the winning fix.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-full bg-accent-emerald/20 text-accent-emerald flex items-center justify-center font-bold text-xs mt-0.5">4</span>
-              <span><strong>Honest Outcome Reports:</strong> Distinguishes between verified fixes, workarounds, and documented upstream kernel regressions.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-dark-900 border border-dark-700/70 p-6 rounded-2xl font-mono text-xs text-slate-300 leading-relaxed shadow-xl">
-          <div class="text-slate-500 mb-3 pb-2 border-b border-dark-800">termiai case "Fix microphone latency on Ubuntu"</div>
-          <p class="text-cyan-400">✓ Diagnosed (read-only): ALC295 codec detected, driver delay in dmesg</p>
-          <p class="text-slate-400 mt-2">Hypothesis Plan (Ranked):</p>
-          <p class="text-slate-300 pl-3">1. Add snd-hda-intel latency options to modprobe [Full Reversibility]</p>
-          <p class="text-slate-300 pl-3">2. Switch pipewire buffer sizes in daemon config [Full Reversibility]</p>
-          <div class="mt-4 p-3 bg-dark-800/80 rounded-lg border border-dark-700">
-            <p class="text-amber-400 font-semibold mb-1">Attempt #1 Failed: Test not met.</p>
-            <p class="text-slate-400">↺ Rolled back modprobe.d/alsa-base.conf to original SHA-256</p>
-            <p class="text-accent-emerald mt-1">Starting Attempt #2...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Footer -->
-  <footer class="relative z-10 border-t border-dark-800 py-16 bg-dark-950">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-extrabold text-white tracking-tight mb-4">Experience the safe terminal assistant.</h2>
-      <p class="text-slate-400 mb-8 max-w-lg mx-auto text-sm">Open source, locally configurable, and built to ensure you never fear a command line again.</p>
-      
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://github.com/shammadahmed/termiai" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-accent-emerald hover:bg-emerald-400 text-dark-950 font-bold text-sm transition shadow-lg shadow-emerald-500/10">
-          View on GitHub
-        </a>
-        <a href="https://github.com/shammadahmed/termiai#readme" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-dark-800 hover:bg-dark-700 text-slate-200 border border-slate-700 font-medium text-sm transition">
-          Read Documentation
-        </a>
-      </div>
-
-      <div class="mt-12 pt-8 border-t border-dark-800/80 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>TermiAI • Prompt your operating system safely</div>
-        <div>Maintained by <a href="https://github.com/shammadahmed" target="_blank" class="text-slate-400 hover:text-white underline">Hammad Ahmed</a></div>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <div id="install" class="max-w-xl mx-auto bg-
